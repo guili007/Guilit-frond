@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le corpus — Guilit</title>
+<meta name="description" content="Comment Guilit construit un corpus français↔lingala à partir des conversations, et comment vos données y sont — ou n'y sont pas — traitées.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <mask id="gmask">
+    <rect x="0" y="0" width="120" height="120" fill="black"/>
+    <circle cx="60" cy="60" r="45" fill="white"/>
+    <circle cx="60" cy="60" r="18" fill="black"/>
+    <rect x="85" y="0" width="35" height="45" fill="black"/>
+    <rect x="60" y="45" width="25" height="15" fill="white"/>
+  </mask>
+  <symbol id="i-telegram" viewBox="0 0 24 24">
+    <path d="M21.94 4.04a1.2 1.2 0 0 0-1.28-.17L2.5 11.2c-.9.36-.86 1.65.06 1.95l4.5 1.47 1.7 5.16c.24.72 1.16.92 1.68.37l2.47-2.6 4.5 3.3c.63.46 1.53.13 1.7-.64l3.2-14.6a1.2 1.2 0 0 0-.37-1.57ZM9.1 14.2l8.7-6.6-6.9 7.6c-.15.17-.24.38-.26.6l-.2 2.2-1.05-3.2a.9.9 0 0 0-.29-.6Z"/>
+  </symbol>
+  <symbol id="i-database" viewBox="0 0 24 24">
+    <ellipse cx="12" cy="5.4" rx="7.6" ry="3.2"/>
+    <path d="M4.4 8.6v3.6c0 1.77 3.4 3.2 7.6 3.2s7.6-1.43 7.6-3.2V8.6c-1.6 1.35-4.4 2.1-7.6 2.1s-6-.75-7.6-2.1Z"/>
+    <path d="M4.4 15v3.6c0 1.77 3.4 3.2 7.6 3.2s7.6-1.43 7.6-3.2V15c-1.6 1.35-4.4 2.1-7.6 2.1S6 16.35 4.4 15Z" opacity=".55"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24">
+    <path d="M12 1.7 3.9 5v6.6c0 4.8 3.36 9.27 8.1 10.7 4.74-1.43 8.1-5.9 8.1-10.7V5Zm3.9 7.4-4.7 5.9a1 1 0 0 1-1.5.07L7.1 12.5a1 1 0 1 1 1.4-1.42l1.8 1.77 4-5a1 1 0 1 1 1.6 1.25Z"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path d="M9.5 4.8a1 1 0 0 1 1.4 0l6.8 6.8a1 1 0 0 1 0 1.4l-6.8 6.8a1 1 0 1 1-1.4-1.4L15.6 12 9.5 6.2a1 1 0 0 1 0-1.4Z"/>
+  </symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24">
+    <path d="M12 1.6A4.9 4.9 0 0 0 7.1 6.5v2.4h2.3V6.5a2.6 2.6 0 0 1 5.2 0v2.4h2.3V6.5A4.9 4.9 0 0 0 12 1.6Z"/>
+    <path d="M5.6 10.2h12.8c.66 0 1.2.54 1.2 1.2v9.4c0 .66-.54 1.2-1.2 1.2H5.6a1.2 1.2 0 0 1-1.2-1.2v-9.4c0-.66.54-1.2 1.2-1.2Zm6.4 3.4a1.7 1.7 0 0 0-.85 3.17v1.9a.85.85 0 0 0 1.7 0v-1.9A1.7 1.7 0 0 0 12 13.6Z"/>
+  </symbol>
+</defs>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><g mask="url(#gmask)"><g transform="rotate(-45 60 60)">
+        <rect x="-50" y="-30" width="220" height="42" fill="#E24B4A"/>
+        <rect x="-50" y="16" width="220" height="42" fill="#F0A227"/>
+        <rect x="-50" y="62" width="220" height="42" fill="#0C447C"/>
+        <rect x="-50" y="108" width="220" height="42" fill="#E24B4A"/>
+      </g></g></svg>
+      Guilit
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#difference">Ce qui change</a></li>
+      <li><a href="index.html#fonctions">Fonctions</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="confidentialite.html">Confidentialité</a></li>
+    </ul>
+    <a class="nav-cta" href="https://t.me/GuilitBot">
+      <svg aria-hidden="true"><use href="#i-telegram"/></svg>
+      Ouvrir sur Telegram
+    </a>
+  </div>
+</nav>
+
+<!-- ================= INTRO ================= -->
+<header class="stripes">
+  <div class="wrap page-hero">
+    <span class="kicker">L'actif stratégique</span>
+    <h1>Le corpus qui manque au lingala.</h1>
+    <p class="lede">
+      Le modèle qui fait tourner Guilit est loué à un fournisseur et remplaçable
+      du jour au lendemain. Ce qui ne l'est pas, c'est ce que les conversations
+      construisent au fil du temps.
+    </p>
+  </div>
+</header>
+
+<!-- ================= POURQUOI ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Pourquoi collecter</span>
+      <h2>Un internet presque sans lingala.</h2>
+      <p>
+        Les grands modèles de langage apprennent sur d'immenses quantités de texte
+        disponibles en ligne. Le français y est abondant. L'anglais, plus encore.
+        Le lingala, langue de dizaines de millions de personnes, y est presque
+        absent — trop peu de texte écrit, trop peu structuré pour qu'un modèle
+        l'apprenne correctement par simple exposition.
+      </p>
+      <p>
+        Chaque conversation acceptée sur Guilit produit une paire de phrases
+        français↔lingala réelle, ancrée dans un usage courant plutôt que dans un
+        dictionnaire. Accumulée, cette paire devient un jeu de données qui
+        n'existe nulle part ailleurs à cette échelle pour le lingala parlé
+        aujourd'hui à Kinshasa.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PIPELINE ================= -->
+<section class="section dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Comment une réponse est produite</span>
+      <h2>Une chaîne de repli, pas un aller-retour de traduction.</h2>
+      <p>
+        Traduire brutalement l'entrée puis la sortie détruirait la nuance et ne
+        produirait aucune vraie paire lingala. Guilit essaie d'abord de répondre
+        nativement, et ne se rabat sur une traduction que si la réponse en
+        lingala échoue son propre contrôle qualité.
+      </p>
+    </div>
+
+    <div class="pipeline reveal-stagger">
+      <div class="pipeline-step">
+        <span class="step-tag">1</span>
+        <h4>Message reçu</h4>
+        <p>En lingala, en français, ou un mélange des deux.</p>
+      </div>
+      <div class="pipeline-arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div>
+      <div class="pipeline-step">
+        <span class="step-tag">2</span>
+        <h4>Détection de langue</h4>
+        <p>Score pondéré par lexique + morphologie, pas un simple comptage de mots.</p>
+      </div>
+      <div class="pipeline-arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div>
+      <div class="pipeline-step">
+        <span class="step-tag">3</span>
+        <h4>Traduction de contexte</h4>
+        <p>Lingala→français utilisé comme appui, jamais comme remplacement du message original.</p>
+      </div>
+      <div class="pipeline-arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div>
+      <div class="pipeline-step">
+        <span class="step-tag">4</span>
+        <h4>Réponse en lingala</h4>
+        <p>Le modèle reçoit l'original et la traduction, puis répond directement en lingala.</p>
+      </div>
+      <div class="pipeline-arrow"><svg aria-hidden="true"><use href="#i-arrow"/></svg></div>
+      <div class="pipeline-step pipeline-branch">
+        <span class="step-tag">5</span>
+        <h4>Contrôle qualité</h4>
+        <p>Si le lingala produit est jugé insuffisant : régénération en français, puis traduction vers le lingala. En dernier recours, le français est servi tel quel — l'utilisateur le comprend toujours.</p>
+      </div>
+    </div>
+    <p class="pipeline-note">
+      Cette échelle de repli sert aussi le corpus : elle indique, pour chaque
+      tour de conversation conservé, si le lingala est venu naturellement ou
+      s'il a fallu passer par une traduction — une information gardée dans les
+      métadonnées, jamais effacée pour paraître plus propre.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CE QUI EST CONSERVÉ ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Ce qui atterrit dans le corpus</span>
+      <h2>Une paire de phrases, jamais une identité.</h2>
+    </div>
+    <div class="grid-features reveal-stagger">
+      <article class="feature-card" style="--accent-c:var(--teal);">
+        <div class="feature-icon"><svg aria-hidden="true"><use href="#i-database"/></svg></div>
+        <h3>La paire français↔lingala</h3>
+        <p>Le message, sa traduction quand elle a été nécessaire, la langue détectée, et la note laissée par l'utilisateur si elle existe.</p>
+      </article>
+      <article class="feature-card" style="--accent-c:var(--navy);">
+        <div class="feature-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <h3>Un identifiant haché, jamais en clair</h3>
+        <p>Une empreinte SHA-256 irréversible remplace l'identifiant Telegram avant tout enregistrement. Elle relie les tours d'une même conversation, sans révéler qui l'a écrite.</p>
+      </article>
+      <article class="feature-card" style="--accent-c:var(--ochre);">
+        <div class="feature-icon"><svg aria-hidden="true"><use href="#i-lock"/></svg></div>
+        <h3>Retrait immédiat, sans condition</h3>
+        <p>La commande <code>/confidentialite</code> arrête la collecte pour cette conversation, y compris pour quelqu'un qui a déjà épuisé sa limite de messages.</p>
+      </article>
+    </div>
+    <p class="section-cta reveal"><a href="confidentialite.html">Lire la politique de confidentialité complète <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ================= HONNÊTETÉ SUR LES LIMITES ================= -->
+<section class="section tinted stripes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Sans enjoliver</span>
+      <h2>Ce que le corpus n'est pas.</h2>
+    </div>
+    <div class="grid-features reveal-stagger">
+      <article class="feature-card" style="--accent-c:var(--red);">
+        <h3>Pas un jeu de données trié</h3>
+        <p>Aucun filtre de qualité caché ne décide en amont ce qui « ressemble » à une bonne paire. Tout ce qui respecte le consentement est conservé avec ses métadonnées ; le tri revient à qui exploite les données ensuite.</p>
+      </article>
+      <article class="feature-card" style="--accent-c:var(--navy);">
+        <h3>Pas encore exploité publiquement</h3>
+        <p>Un mécanisme d'export existe pour un usage interne et des partenariats de recherche encadrés. Il n'est pas ouvert par défaut : une clé d'accès explicite est nécessaire, et son absence désactive la fonction plutôt que de la rendre permissive.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPEL FINAL ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Contribuer sans y penser</h2>
+      <p>Utiliser Guilit en français ou en lingala fait déjà avancer le corpus — sauf si vous choisissez de vous retirer.</p>
+      <a class="btn-primary" href="https://t.me/GuilitBot">
+        <svg aria-hidden="true"><use href="#i-telegram"/></svg>
+        Ouvrir @GuilitBot
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><g mask="url(#gmask)"><g transform="rotate(-45 60 60)">
+            <rect x="-50" y="-30" width="220" height="42" fill="#E24B4A"/>
+            <rect x="-50" y="16" width="220" height="42" fill="#F0A227"/>
+            <rect x="-50" y="62" width="220" height="42" fill="#0C447C"/>
+            <rect x="-50" y="108" width="220" height="42" fill="#E24B4A"/>
+          </g></g></svg>
+          Guilit
+        </a>
+        <p>L'assistant qui parle votre langue. Conçu à Kinshasa.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="index.html#difference">Ce qui change</a></li>
+          <li><a href="index.html#fonctions">Fonctions</a></li>
+          <li><a href="index.html#etapes">Comment ça marche</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="corpus.html">Le corpus</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="https://t.me/GuilitBot">Telegram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Juridique</h4>
+        <ul>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="conditions.html">Conditions d'utilisation</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Guilit — Kinshasa, République démocratique du Congo</span>
+      <span>Guilit peut se tromper. Vérifiez les informations importantes.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('is-visible');
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => io.observe(el));
+
+const progress = document.getElementById('progress');
+const nav = document.getElementById('nav');
+const onScroll = () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  nav.classList.toggle('is-stuck', window.scrollY > 8);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+</script>
+</body>
+</html>

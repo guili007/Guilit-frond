@@ -329,6 +329,121 @@ footer{border-top:1px solid var(--border); padding:48px 0 40px; margin-top:20px;
   padding:2px 9px; border-radius:6px; font-size:14px;
 }
 
+/* ---------- Lien d'appel discret (renvoi vers une page dédiée) ---------- */
+.section-cta{text-align:center; margin:-24px 0 54px;}
+.section-cta a{
+  display:inline-flex; align-items:center; gap:7px; font-weight:600; font-size:15px;
+  color:var(--navy); text-decoration:none; padding-bottom:2px; border-bottom:1px solid transparent;
+  transition:border-color .2s, gap .2s;
+}
+.section-cta a:hover{border-color:var(--navy); gap:11px;}
+.section-cta svg{width:16px; height:16px;}
+.section.dark .section-cta a{color:#fff;}
+.section.dark .section-cta a:hover{border-color:#fff;}
+
+/* ---------- Introduction de page (à propos, corpus, FAQ) ---------- */
+.page-hero{padding:72px 0 24px; text-align:center;}
+.page-hero .kicker{display:block; margin-bottom:16px;}
+.page-hero h1{font-size:clamp(32px,4.8vw,50px); font-weight:600; max-width:760px; margin:0 auto 20px;}
+.page-hero p.lede{font-size:17.5px; max-width:600px; margin:0 auto;}
+
+/* ---------- Repères chiffrés ---------- */
+.stat-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:28px; text-align:center;}
+.stat-row .stat{padding:8px;}
+.stat-row .num{
+  font-family:"Fraunces",serif; font-weight:600; font-size:clamp(30px,4vw,44px);
+  color:var(--navy); display:block; line-height:1.1;
+}
+.section.dark .stat-row .num{color:#fff;}
+.stat-row .num .accent{color:var(--red);}
+.stat-row .label{font-size:13.5px; color:var(--ink-soft); margin-top:6px;}
+.section.dark .stat-row .label{color:rgba(255,255,255,.65);}
+
+/* ---------- Chronologie (à propos) ---------- */
+.timeline{position:relative; max-width:680px; margin:0 auto; padding-left:32px;}
+.timeline::before{
+  content:''; position:absolute; left:7px; top:6px; bottom:6px; width:2px;
+  background:linear-gradient(var(--red),var(--ochre),var(--navy),var(--teal));
+  opacity:.35;
+}
+.timeline-item{position:relative; padding-bottom:38px;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-item::before{
+  content:''; position:absolute; left:-32px; top:4px; width:15px; height:15px; border-radius:50%;
+  background:var(--cream); border:3px solid var(--navy);
+}
+.timeline-item h3{font-size:17px; font-weight:600; font-family:"Work Sans",sans-serif; margin-bottom:6px;}
+.timeline-item .when{font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--red); display:block; margin-bottom:6px;}
+.timeline-item p{font-size:15px; margin:0;}
+
+/* ---------- Pipeline linguistique (corpus) ---------- */
+.pipeline{display:flex; flex-wrap:wrap; align-items:stretch; justify-content:center; gap:0; margin:0 auto;}
+.pipeline-step{
+  background:#fff; border:1px solid var(--border); border-radius:14px; padding:18px 20px;
+  width:190px; text-align:center; box-shadow:var(--shadow-sm);
+}
+.pipeline-step .step-tag{
+  font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--ink-faint); display:block; margin-bottom:6px;
+}
+.pipeline-step h4{font-size:14.5px; font-weight:600; font-family:"Work Sans",sans-serif; margin-bottom:6px; color:var(--ink);}
+.pipeline-step p{font-size:12.8px; margin:0; line-height:1.5;}
+.pipeline-arrow{
+  display:flex; align-items:center; justify-content:center; width:40px; color:var(--ink-faint); flex-shrink:0;
+}
+.pipeline-arrow svg{width:20px; height:20px;}
+.pipeline-branch{
+  border-color:var(--ochre); background:rgba(240,162,39,.05);
+}
+.pipeline-note{
+  text-align:center; font-size:13.5px; color:var(--ink-faint); margin-top:18px; max-width:520px; margin-left:auto; margin-right:auto;
+}
+@media (max-width:900px){
+  .pipeline{flex-direction:column; align-items:center;}
+  .pipeline-step{width:min(320px,100%);}
+  .pipeline-arrow{width:auto; height:28px;}
+  .pipeline-arrow svg{transform:rotate(90deg);}
+}
+
+/* ---------- FAQ : accordéon ---------- */
+.faq-list{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:12px;}
+.faq-item{
+  background:#fff; border:1px solid var(--border); border-radius:14px; overflow:hidden;
+  transition:border-color .2s, box-shadow .2s;
+}
+.faq-item.is-open{border-color:var(--border-strong); box-shadow:var(--shadow-sm);}
+.faq-q{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px;
+  background:none; border:0; text-align:left; padding:20px 22px; cursor:pointer;
+  font:inherit; font-weight:600; font-size:16px; color:var(--ink); font-family:"Work Sans",sans-serif;
+}
+.faq-q .i-toggle{
+  flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--cream-deep); color:var(--navy);
+  display:flex; align-items:center; justify-content:center; transition:transform .3s cubic-bezier(.22,.9,.3,1), background .2s;
+}
+.faq-q .i-toggle svg{width:13px; height:13px; transition:transform .3s cubic-bezier(.22,.9,.3,1);}
+.faq-item.is-open .i-toggle{background:var(--navy); color:#fff;}
+.faq-item.is-open .i-toggle svg{transform:rotate(45deg);}
+.faq-a{
+  max-height:0; overflow:hidden; transition:max-height .35s cubic-bezier(.22,.9,.3,1), padding .35s;
+  padding:0 22px;
+}
+.faq-a-inner{padding-bottom:22px;}
+.faq-a p{font-size:15px; margin:0 0 12px;}
+.faq-a p:last-child{margin-bottom:0;}
+.faq-category{
+  font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--red);
+  margin:44px 0 16px; text-align:center;
+}
+.faq-category:first-of-type{margin-top:0;}
+
+/* ---------- Mission / valeurs (à propos) ---------- */
+.pull-quote{
+  max-width:640px; margin:0 auto; text-align:center; font-family:"Fraunces",serif; font-weight:600;
+  font-size:clamp(21px,2.6vw,28px); line-height:1.45; color:var(--ink); font-style:italic;
+}
+.pull-quote .accent{color:var(--red); font-style:italic;}
+
 /* ---------- Accessibilité mouvement ---------- */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
@@ -338,4 +453,6 @@ footer{border-top:1px solid var(--border); padding:48px 0 40px; margin-top:20px;
   .reveal,.reveal-stagger > *{opacity:1 !important; transform:none !important; transition:none !important;}
   .bubble,.typing{opacity:1 !important; transform:none !important; animation:none !important; max-height:none !important; padding-top:12px; padding-bottom:12px;}
   .eyebrow .dot{animation:none !important;}
+  .faq-a{transition:none !important;}
+  .faq-q .i-toggle, .faq-q .i-toggle svg{transition:none !important;}
 }

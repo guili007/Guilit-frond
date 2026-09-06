@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Guilit</title>
+<meta name="description" content="Les questions les plus courantes sur Guilit : utilisation, langues, fiabilité, confidentialité et avenir du projet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <mask id="gmask">
+    <rect x="0" y="0" width="120" height="120" fill="black"/>
+    <circle cx="60" cy="60" r="45" fill="white"/>
+    <circle cx="60" cy="60" r="18" fill="black"/>
+    <rect x="85" y="0" width="35" height="45" fill="black"/>
+    <rect x="60" y="45" width="25" height="15" fill="white"/>
+  </mask>
+  <symbol id="i-telegram" viewBox="0 0 24 24">
+    <path d="M21.94 4.04a1.2 1.2 0 0 0-1.28-.17L2.5 11.2c-.9.36-.86 1.65.06 1.95l4.5 1.47 1.7 5.16c.24.72 1.16.92 1.68.37l2.47-2.6 4.5 3.3c.63.46 1.53.13 1.7-.64l3.2-14.6a1.2 1.2 0 0 0-.37-1.57ZM9.1 14.2l8.7-6.6-6.9 7.6c-.15.17-.24.38-.26.6l-.2 2.2-1.05-3.2a.9.9 0 0 0-.29-.6Z"/>
+  </symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24">
+    <path d="M11 3.5a1 1 0 0 1 2 0V11h7.5a1 1 0 0 1 0 2H13v7.5a1 1 0 0 1-2 0V13H3.5a1 1 0 0 1 0-2H11V3.5Z"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path d="M9.5 4.8a1 1 0 0 1 1.4 0l6.8 6.8a1 1 0 0 1 0 1.4l-6.8 6.8a1 1 0 1 1-1.4-1.4L15.6 12 9.5 6.2a1 1 0 0 1 0-1.4Z"/>
+  </symbol>
+</defs>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><g mask="url(#gmask)"><g transform="rotate(-45 60 60)">
+        <rect x="-50" y="-30" width="220" height="42" fill="#E24B4A"/>
+        <rect x="-50" y="16" width="220" height="42" fill="#F0A227"/>
+        <rect x="-50" y="62" width="220" height="42" fill="#0C447C"/>
+        <rect x="-50" y="108" width="220" height="42" fill="#E24B4A"/>
+      </g></g></svg>
+      Guilit
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#difference">Ce qui change</a></li>
+      <li><a href="index.html#fonctions">Fonctions</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="confidentialite.html">Confidentialité</a></li>
+    </ul>
+    <a class="nav-cta" href="https://t.me/GuilitBot">
+      <svg aria-hidden="true"><use href="#i-telegram"/></svg>
+      Ouvrir sur Telegram
+    </a>
+  </div>
+</nav>
+
+<!-- ================= INTRO ================= -->
+<header class="stripes">
+  <div class="wrap page-hero">
+    <span class="kicker">Questions fréquentes</span>
+    <h1>Ce qu'on nous demande le plus.</h1>
+    <p class="lede">
+      Une question qui n'a pas sa réponse ici ? Écrivez-la directement à
+      <a href="https://t.me/GuilitBot">@GuilitBot</a> — elle sera lue.
+    </p>
+  </div>
+</header>
+
+<!-- ================= FAQ ================= -->
+<section class="section">
+  <div class="wrap">
+
+    <p class="faq-category reveal">Utilisation</p>
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Comment j'utilise Guilit ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Ouvrez Telegram, cherchez <strong>@GuilitBot</strong> ou touchez le bouton « Ouvrir sur Telegram » en haut de cette page, puis écrivez comme à un contact. Aucune inscription séparée, aucune application à installer en plus de Telegram.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Est-ce gratuit ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Oui, à ce stade du projet. Des limites de nombre de messages par minute et par jour s'appliquent, pour que le service reste disponible pour tout le monde. Une offre payante pourra apparaître plus tard, annoncée à l'avance.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Ça marche avec peu de data ou une petite connexion ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>C'est une contrainte de conception, pas un compromis. Les réponses sont volontairement courtes : pas de pavé de texte quand deux phrases suffisent, parce que chaque mégaoctet coûte en RDC.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <p class="faq-category reveal">Langues</p>
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Dans quelles langues Guilit répond-il ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Français et lingala. Vous pouvez écrire dans l'une, dans l'autre, ou mélanger les deux dans la même phrase — Guilit détecte la langue dominante et répond dans la vôtre.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Le lingala est-il vraiment compris, ou juste traduit ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Guilit essaie d'abord de répondre nativement en lingala, en s'appuyant sur une traduction de contexte plutôt qu'un aller-retour automatique. Ce n'est que si cette réponse échoue un contrôle de qualité qu'il se rabat sur le français puis traduit. Le détail complet est sur la page <a href="corpus.html">Le corpus</a>.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Quel lingala Guilit parle-t-il — celui des livres ou celui de la rue ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Celui d'un usage courant, actuel — pas le lingala classique des dictionnaires anciens. C'est un choix délibéré : mieux vaut être compris à Kinshasa aujourd'hui que fidèle à une forme qui ne se parle plus.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <p class="faq-category reveal">Fiabilité</p>
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Guilit peut-il se tromper ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Oui, et parfois avec assurance. C'est un modèle de langage, pas une source officielle. Vérifiez toute information importante — surtout pour une démarche administrative, médicale ou juridique — auprès de la source concernée.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Les informations sur les démarches (DGI, etc.) sont-elles à jour ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Elles viennent de sources publiques vérifiées au moment de leur ajout, mais les procédures et montants administratifs changent. Considérez-les comme un point de départ, pas comme la version définitive.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          À quoi servent les boutons sous chaque réponse ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Ils enregistrent votre avis sur la réponse. Cette note rejoint le corpus si vous n'avez pas désactivé la collecte, et sert à repérer ce qui fonctionne réellement plutôt que ce qui semble fonctionner.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <p class="faq-category reveal">Confidentialité</p>
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Que fait Guilit de mes messages ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Ils servent à vous répondre et, sauf refus de votre part, à construire un corpus français↔lingala anonymisé. Le détail complet est dans la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Comment je me retire ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Envoyez <code>/confidentialite</code> dans la conversation. L'effet est immédiat, même si vous avez atteint votre limite de messages du jour.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Mes données sont-elles vendues à qui que ce soit ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Non. Ni vendues, ni louées, ni utilisées pour de la publicité. Votre identifiant est haché avant tout enregistrement dans le corpus — il ne permet pas de remonter jusqu'à vous.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <p class="faq-category reveal">WhatsApp et avenir</p>
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Y a-t-il une version WhatsApp ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Pas encore. C'est la prochaine étape prévue une fois le comportement de Guilit validé sur Telegram. Voir la <a href="a-propos.html">feuille de route</a>.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Guilit comprendra-t-il un jour les notes vocales ?
+          <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>C'est l'objectif de la phase 3 : un modèle de reconnaissance vocale affiné sur le corpus congolais collecté via Guilit lui-même.</p>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= APPEL FINAL ================= -->
+<section class="section tinted stripes">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Toujours une question ?</h2>
+      <p>Écrivez-la directement dans la conversation — c'est souvent le plus rapide.</p>
+      <a class="btn-primary" href="https://t.me/GuilitBot">
+        <svg aria-hidden="true"><use href="#i-telegram"/></svg>
+        Ouvrir @GuilitBot
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><g mask="url(#gmask)"><g transform="rotate(-45 60 60)">
+            <rect x="-50" y="-30" width="220" height="42" fill="#E24B4A"/>
+            <rect x="-50" y="16" width="220" height="42" fill="#F0A227"/>
+            <rect x="-50" y="62" width="220" height="42" fill="#0C447C"/>
+            <rect x="-50" y="108" width="220" height="42" fill="#E24B4A"/>
+          </g></g></svg>
+          Guilit
+        </a>
+        <p>L'assistant qui parle votre langue. Conçu à Kinshasa.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="index.html#difference">Ce qui change</a></li>
+          <li><a href="index.html#fonctions">Fonctions</a></li>
+          <li><a href="index.html#etapes">Comment ça marche</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="corpus.html">Le corpus</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="https://t.me/GuilitBot">Telegram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Juridique</h4>
+        <ul>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="conditions.html">Conditions d'utilisation</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Guilit — Kinshasa, République démocratique du Congo</span>
+      <span>Guilit peut se tromper. Vérifiez les informations importantes.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('is-visible');
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => io.observe(el));
+
+const progress = document.getElementById('progress');
+const nav = document.getElementById('nav');
+const onScroll = () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  nav.classList.toggle('is-stuck', window.scrollY > 8);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Accordéon FAQ : plusieurs questions peuvent rester ouvertes en même temps,
+// la hauteur est animée via max-height (pas de hauteur fixe : le texte varie).
+document.querySelectorAll('.faq-item').forEach((item) => {
+  const btn = item.querySelector('.faq-q');
+  const answer = item.querySelector('.faq-a');
+  btn.addEventListener('click', () => {
+    const open = item.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(open));
+    answer.style.maxHeight = open ? answer.scrollHeight + 'px' : '0px';
+  });
+});
+
+// Une réponse ouverte doit garder sa hauteur juste si la fenêtre change de
+// taille (le texte peut se répartir sur plus ou moins de lignes).
+window.addEventListener('resize', () => {
+  document.querySelectorAll('.faq-item.is-open .faq-a').forEach((answer) => {
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  });
+});
+</script>
+</body>
+</html>
