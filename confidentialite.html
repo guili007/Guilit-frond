@@ -74,7 +74,7 @@
   <div class="doc-head">
     <span class="kicker">Politique de confidentialité</span>
     <h1>Ce que Guilit garde, et ce qu'il ne garde pas.</h1>
-    <p class="updated">Dernière mise à jour : 5 septembre 2026</p>
+    <p class="updated">Dernière mise à jour : 25 novembre 2026</p>
   </div>
 
   <p>
@@ -94,10 +94,11 @@
 
   <h2>1. Qui traite vos données</h2>
   <p>
-    Le responsable du traitement est l'éditeur de Guilit, identifié sur la page
+    Le responsable du traitement est Trillion MONGHIRO, éditeur de Guilit,
+    un projet personnel présenté sur la page
     <a href="mentions-legales.html">Mentions légales</a>.
     Pour toute question relative à vos données :
-    <span class="todo">À COMPLÉTER — adresse e-mail de contact</span>.
+    <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
   </p>
 
   <h2>2. Ce qui est enregistré</h2>
@@ -106,6 +107,7 @@
   <ul>
     <li>Votre <strong>identifiant Telegram</strong> et l'identifiant de la discussion, afin de vous répondre au bon endroit.</li>
     <li>Les <strong>derniers messages échangés</strong>, pour que Guilit garde le fil d'une question à la suivante.</li>
+    <li>Une <strong>file de messages en attente</strong>, pour reprendre le traitement après une interruption et éviter de retraiter les renvois de Telegram. Elle conserve le texte ou la référence d'une note vocale, puis temporairement la réponse prête à envoyer.</li>
     <li>Un <strong>compteur de messages</strong> par minute et par jour, qui applique les limites d'usage.</li>
     <li>Des <strong>journaux techniques</strong> (horodatage, code d'erreur, durée de traitement) sans contenu de message.</li>
   </ul>
@@ -143,14 +145,16 @@
   </ul>
   <p>
     Pour demander en plus la <strong>suppression</strong> des paires déjà enregistrées,
-    écrivez à l'adresse de contact ci-dessus. Comme le corpus ne contient qu'une empreinte
+    écrivez à <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
+    Comme le corpus ne contient qu'une empreinte
     de votre identifiant, précisez votre identifiant Telegram dans la demande : sans lui,
     les lignes correspondantes ne peuvent pas être retrouvées.
   </p>
 
   <h2>5. Durée de conservation</h2>
   <ul>
-    <li><strong>Mémoire de conversation</strong> : conservée le temps nécessaire au fil de discussion, puis purgée.</li>
+    <li><strong>Mémoire de conversation</strong> : les messages ne sont plus utilisés comme contexte après 24 heures. Le nettoyage automatique passe toutes les cinq minutes pour les supprimer de la mémoire courte lorsque le service est disponible ; après une interruption, il reprend au démarrage.</li>
+    <li><strong>File d'attente</strong> : le contenu et la réponse sont effacés après le traitement ou l'échec définitif. Les messages en attente depuis plus de 24 heures expirent à la reprise du traitement. Les métadonnées nécessaires pour reconnaître les doublons, sans texte ni identifiant de conversation, sont conservées sept jours après la fin du traitement, puis nettoyées lorsque le service est disponible.</li>
     <li><strong>Compteurs d'usage</strong> : la fenêtre glissante correspondante (une minute, un jour).</li>
     <li><strong>Corpus linguistique</strong> : conservé sans limite de durée prédéfinie — c'est un jeu de données de recherche, dont la valeur tient précisément à son accumulation. Il ne contient pas votre identité en clair.</li>
   </ul>
@@ -194,7 +198,7 @@
   <p>
     Vous pouvez demander l'accès, la rectification ou la suppression des données vous
     concernant, ainsi que vous opposer à la constitution du corpus (voir le point 4).
-    Ces demandes se font à l'adresse de contact indiquée au point 1.
+    Ces demandes se font à <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
   </p>
 
   <h2>10. Modifications</h2>
@@ -205,8 +209,8 @@
 
   <div class="callout" style="margin-top:44px;">
     <p>
-      Une question qui n'a pas sa réponse ici ? Écrivez-la directement à Guilit sur
-      <a href="https://t.me/GuilitBot">Telegram</a> — elle sera lue.
+      Une question sur vos données ? Écrivez à
+      <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
     </p>
   </div>
 </main>
@@ -244,6 +248,7 @@
           <li><a href="confidentialite.html">Confidentialité</a></li>
           <li><a href="conditions.html">Conditions d'utilisation</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="mailto:contact@guilit.com">Contact et support</a></li>
         </ul>
       </div>
     </div>

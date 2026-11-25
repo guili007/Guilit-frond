@@ -141,6 +141,9 @@ svg{fill:currentColor;}
 @keyframes rotWord{0%,42%{opacity:1; transform:translateY(0);} 50%,92%{opacity:0; transform:translateY(-12px);} 100%{opacity:1; transform:translateY(0);}}
 .hero p.lede{font-size:18.5px; max-width:580px; margin:0 auto 36px;}
 .hero-ctas{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+.lingala-shortcut{margin-top:18px; font-size:1rem;}
+.lingala-intro .step p{font-size:1rem; overflow-wrap:anywhere;}
+.lingala-intro .kicker{font-size:.875rem;}
 .hero-trust{margin-top:26px; font-size:13.5px; color:var(--ink-faint); display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
 .hero-trust span{display:inline-flex; align-items:center; gap:6px;}
 .hero-trust svg{width:15px; height:15px; color:var(--teal);}
