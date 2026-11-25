@@ -69,7 +69,7 @@
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="confidentialite.html">Confidentialité</a></li>
     </ul>
-    <a class="nav-cta" href="https://t.me/GuilitBot">
+    <a class="nav-cta" href="https://t.me/GuilitBot?start=site">
       <svg aria-hidden="true"><use href="#i-telegram"/></svg>
       Ouvrir sur Telegram
     </a>
@@ -100,7 +100,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Ouvrez Telegram, cherchez <strong>@GuilitBot</strong> ou touchez le bouton « Ouvrir sur Telegram » en haut de cette page, puis écrivez comme à un contact. Aucune inscription séparée, aucune application à installer en plus de Telegram.</p>
+          <p>Ouvrez Telegram, cherchez <strong>@GuilitBot</strong> ou touchez le bouton « Ouvrir sur Telegram » en haut de cette page, puis appuyez sur « Démarrer ». Guilit affiche son accueil et des exemples ; vous pouvez ensuite écrire comme à un contact. Aucune inscription séparée, aucune application à installer en plus de Telegram.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -109,7 +109,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Oui, à ce stade du projet. Des limites de nombre de messages par minute et par jour s'appliquent, pour que le service reste disponible pour tout le monde. Une offre payante pourra apparaître plus tard, annoncée à l'avance.</p>
+          <p>La démo est gratuite et limitée à trois questions par jour en conversation privée. Les commandes /start, /aide, /role, /vision, /exemples et /confidentialite ne consomment pas de question. Aucun tarif futur n’est encore annoncé.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -120,6 +120,26 @@
         <div class="faq-a"><div class="faq-a-inner">
           <p>C'est une contrainte de conception, pas un compromis. Les réponses sont volontairement courtes : pas de pavé de texte quand deux phrases suffisent, parce que chaque mégaoctet coûte en RDC.</p>
         </div></div>
+      </div>
+    </div>
+
+    <p class="faq-category reveal">Le rôle et la vision</p>
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">À quoi sert Guilit ?<span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>À comprendre un cours, traduire ou reformuler un texte, rédiger un brouillon et s’orienter sur les démarches documentées. Tapez /role pour ses capacités et ses limites, ou /exemples pour des idées de questions.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quelle est la vision du projet ?<span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Rendre l’information plus accessible dans les langues du quotidien, améliorer le lingala avec des locuteurs et enrichir les sources congolaises. WhatsApp, la voix et l’adaptation éventuelle d’un modèle sont des étapes envisagées. La démo actuelle fonctionne sur Telegram.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Qui a créé Guilit ? Est-ce son propre modèle ?<span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Guilit est un projet personnel porté par Trillion MONGHIRO. Le prototype utilise des modèles tiers via API, actuellement DeepSeek pour la démo, avec une architecture permettant de changer de fournisseur. Aucun modèle fondamental entraîné par Guilit n’est annoncé comme déjà disponible.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Guilit recherche-t-il tout sur Internet ?<span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Il recherche des passages dans sa base documentaire et peut utiliser les connaissances générales du modèle pour expliquer, traduire ou rédiger. Il ne navigue pas sur le Web en direct et ne connaît pas automatiquement les tarifs, délais ou taux du jour. Vérifiez les informations importantes auprès de la source compétente.</p></div></div>
       </div>
     </div>
 
@@ -140,7 +160,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Guilit essaie d'abord de répondre nativement en lingala, en s'appuyant sur une traduction de contexte plutôt qu'un aller-retour automatique. Ce n'est que si cette réponse échoue un contrôle de qualité qu'il se rabat sur le français puis traduit. Le détail complet est sur la page <a href="corpus.html">Le corpus</a>.</p>
+          <p>Le modèle reçoit votre texte original et tente d’en préserver le sens, y compris quand les deux langues sont mélangées. Des contrôles de langue et des sources documentaires complètent ce traitement. Cela ne garantit pas un lingala parfait : l’évaluation avec des locuteurs reste nécessaire.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -292,7 +312,7 @@
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="corpus.html">Le corpus</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="https://t.me/GuilitBot">Telegram</a></li>
+          <li><a href="https://t.me/GuilitBot?start=site">Telegram</a></li>
         </ul>
       </div>
       <div class="footer-col">
