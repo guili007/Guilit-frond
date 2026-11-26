@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Confidentialité — Guilit</title>
-<meta name="description" content="Ce que Guilit enregistre, pourquoi, combien de temps, et comment vous retirer en une commande.">
+<meta name="description" content="Compte, historique de 24 heures et contribution facultative au corpus : vos choix sur Guilit.">
 <link rel="canonical" href="https://guilit.com/confidentialite.html">
 <meta name="theme-color" content="#0C447C">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<!-- Aperçu au partage (WhatsApp, Telegram, Facebook, X, LinkedIn) -->
+<!-- Aperçu au partage -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Guilit">
 <meta property="og:locale" content="fr_CD">
 <meta property="og:url" content="https://guilit.com/confidentialite.html">
 <meta property="og:title" content="Confidentialité — Guilit">
-<meta property="og:description" content="Ce que Guilit enregistre, pourquoi, combien de temps, et comment vous retirer en une commande.">
+<meta property="og:description" content="Compte, historique de 24 heures et contribution facultative au corpus : vos choix sur Guilit.">
 <meta property="og:image" content="https://guilit.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Guilit, l'assistant qui parle votre langue : français et lingala sur Telegram">
+<meta property="og:image:alt" content="Guilit, l'assistant qui parle votre langue : français et lingala sur le web">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +37,7 @@
     <rect x="85" y="0" width="35" height="45" fill="black"/>
     <rect x="60" y="45" width="25" height="15" fill="white"/>
   </mask>
-  <symbol id="i-telegram" viewBox="0 0 24 24">
-    <path d="M21.94 4.04a1.2 1.2 0 0 0-1.28-.17L2.5 11.2c-.9.36-.86 1.65.06 1.95l4.5 1.47 1.7 5.16c.24.72 1.16.92 1.68.37l2.47-2.6 4.5 3.3c.63.46 1.53.13 1.7-.64l3.2-14.6a1.2 1.2 0 0 0-.37-1.57ZM9.1 14.2l8.7-6.6-6.9 7.6c-.15.17-.24.38-.26.6l-.2 2.2-1.05-3.2a.9.9 0 0 0-.29-.6Z"/>
-  </symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-6 4V5a2 2 0 0 1 2-2zm0 2v14l3.4-2H20V5H4z"/></symbol>
 </defs>
 </svg>
 
@@ -63,9 +61,9 @@
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="confidentialite.html">Confidentialité</a></li>
     </ul>
-    <a class="nav-cta" href="https://t.me/GuilitBot?start=site">
-      <svg aria-hidden="true"><use href="#i-telegram"/></svg>
-      Ouvrir sur Telegram
+    <a class="nav-cta" href="https://app.guilit.com">
+      <svg aria-hidden="true"><use href="#i-chat"/></svg>
+      Ouvrir Guilit
     </a>
   </div>
 </nav>
@@ -77,142 +75,31 @@
     <p class="updated">Dernière mise à jour : 25 novembre 2026</p>
   </div>
 
-  <p>
-    Guilit est un assistant conversationnel accessible via Telegram. Cette page décrit,
-    en langage direct, quelles données sont enregistrées lorsque vous l'utilisez,
-    pourquoi elles le sont, et comment vous y mettre fin.
-  </p>
-
-  <div class="callout">
-    <p>
-      <strong>En une phrase :</strong> vos messages servent à vous répondre et, sauf refus
-      de votre part, à construire un corpus français↔lingala. Envoyez
-      <code>/confidentialite</code> dans la conversation pour arrêter cette seconde
-      utilisation immédiatement.
-    </p>
-  </div>
-
-  <h2>1. Qui traite vos données</h2>
-  <p>
-    Le responsable du traitement est Trillion MONGHIRO, éditeur de Guilit,
-    un projet personnel présenté sur la page
-    <a href="mentions-legales.html">Mentions légales</a>.
-    Pour toute question relative à vos données :
-    <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
-  </p>
-
-  <h2>2. Ce qui est enregistré</h2>
-
-  <h3>Pour faire fonctionner la conversation</h3>
-  <ul>
-    <li>Votre <strong>identifiant Telegram</strong> et l'identifiant de la discussion, afin de vous répondre au bon endroit.</li>
-    <li>Les <strong>derniers messages échangés</strong>, pour que Guilit garde le fil d'une question à la suivante.</li>
-    <li>Une <strong>file de messages en attente</strong>, pour reprendre le traitement après une interruption et éviter de retraiter les renvois de Telegram. Elle conserve le texte ou la référence d'une note vocale, puis temporairement la réponse prête à envoyer.</li>
-    <li>Un <strong>compteur de messages</strong> par minute et par jour, qui applique les limites d'usage.</li>
-    <li>Des <strong>journaux techniques</strong> (horodatage, code d'erreur, durée de traitement) sans contenu de message.</li>
-  </ul>
-
-  <h3>Pour le corpus linguistique</h3>
-  <p>
-    C'est la raison d'être du projet : le lingala est quasi absent des données sur lesquelles
-    les modèles d'IA sont entraînés. Chaque échange peut donc être conservé sous forme de
-    <strong>paire de phrases français↔lingala</strong>, avec la langue détectée et,
-    le cas échéant, la note que vous avez donnée à la réponse.
-  </p>
-  <p>
-    Dans ce corpus, <strong>votre identifiant n'apparaît jamais en clair</strong> : il est
-    remplacé par une empreinte cryptographique irréversible (SHA-256) avant enregistrement.
-    Elle permet de repérer que deux phrases viennent de la même conversation, pas de savoir
-    de qui il s'agit.
-  </p>
-
-  <h2>3. Ce qui n'est pas fait</h2>
-  <ul>
-    <li>Vos conversations ne sont <strong>ni vendues, ni louées, ni cédées</strong> à des annonceurs.</li>
-    <li>Aucune publicité, aucun profilage publicitaire, aucun traceur commercial.</li>
-    <li>Aucune décision automatisée produisant des effets juridiques à votre égard.</li>
-    <li>Guilit ne lit rien de votre téléphone : il ne voit que ce que vous lui écrivez.</li>
-  </ul>
-
-  <h2>4. Comment vous retirer</h2>
-  <p>
-    Envoyez <code>/confidentialite</code> dans la conversation Telegram. L'effet est immédiat :
-  </p>
-  <ul>
-    <li>vos échanges <strong>cessent d'alimenter le corpus</strong> ;</li>
-    <li>la mémoire courte de la conversation continue de fonctionner, sinon le bot ne pourrait plus vous répondre correctement ;</li>
-    <li>la commande fonctionne <strong>même si vous avez atteint votre limite de messages</strong> — se retirer ne doit jamais dépendre d'un quota.</li>
-  </ul>
-  <p>
-    Pour demander en plus la <strong>suppression</strong> des paires déjà enregistrées,
-    écrivez à <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
-    Comme le corpus ne contient qu'une empreinte
-    de votre identifiant, précisez votre identifiant Telegram dans la demande : sans lui,
-    les lignes correspondantes ne peuvent pas être retrouvées.
-  </p>
-
-  <h2>5. Durée de conservation</h2>
-  <ul>
-    <li><strong>Mémoire de conversation</strong> : les messages ne sont plus utilisés comme contexte après 24 heures. Le nettoyage automatique passe toutes les cinq minutes pour les supprimer de la mémoire courte lorsque le service est disponible ; après une interruption, il reprend au démarrage.</li>
-    <li><strong>File d'attente</strong> : le contenu et la réponse sont effacés après le traitement ou l'échec définitif. Les messages en attente depuis plus de 24 heures expirent à la reprise du traitement. Les métadonnées nécessaires pour reconnaître les doublons, sans texte ni identifiant de conversation, sont conservées sept jours après la fin du traitement, puis nettoyées lorsque le service est disponible.</li>
-    <li><strong>Compteurs d'usage</strong> : la fenêtre glissante correspondante (une minute, un jour).</li>
-    <li><strong>Corpus linguistique</strong> : conservé sans limite de durée prédéfinie — c'est un jeu de données de recherche, dont la valeur tient précisément à son accumulation. Il ne contient pas votre identité en clair.</li>
-  </ul>
-
-  <h2>6. Sous-traitants</h2>
-  <p>
-    Guilit s'appuie sur des prestataires techniques qui traitent une partie des données pour
-    son compte :
-  </p>
-  <ul>
-    <li><strong>Telegram</strong> — transport des messages, selon sa propre politique de confidentialité.</li>
-    <li><strong>Fournisseurs de modèles de langage</strong> — DeepSeek pour la démo actuelle, et Anthropic (Claude) lorsque le repli est configuré. Le texte de votre message est transmis au fournisseur sollicité pour produire la réponse.</li>
-    <li><strong>Hébergeur du serveur</strong> — voir <a href="mentions-legales.html">Mentions légales</a>.</li>
-  </ul>
-  <p>
-    Ces prestataires étant situés hors de la RDC, vos messages transitent par des serveurs
-    à l'étranger. C'est inhérent au fonctionnement du service.
-  </p>
-
-  <h2>7. Sécurité</h2>
-  <p>
-    Les échanges avec le serveur sont chiffrés en transit (HTTPS). Les identifiants
-    d'utilisateur sont hachés avant d'entrer dans le corpus. L'accès à la base de données est
-    restreint aux personnes qui exploitent le service.
-  </p>
-  <div class="callout warn">
-    <p>
-      <strong>Aucun système n'est infaillible.</strong> N'envoyez pas à Guilit de mot de passe,
-      de numéro de carte bancaire, de code de transfert d'argent ni de données de santé
-      détaillées. Un assistant conversationnel n'est pas le bon endroit pour cela.
-    </p>
-  </div>
-
-  <h2>8. Enfants</h2>
-  <p>
-    Guilit n'est pas destiné aux enfants de moins de 13 ans. Si vous constatez qu'un enfant
-    utilise le service, contactez-nous afin que les données correspondantes soient retirées.
-  </p>
-
-  <h2>9. Vos droits</h2>
-  <p>
-    Vous pouvez demander l'accès, la rectification ou la suppression des données vous
-    concernant, ainsi que vous opposer à la constitution du corpus (voir le point 4).
-    Ces demandes se font à <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
-  </p>
-
-  <h2>10. Modifications</h2>
-  <p>
-    Cette politique peut évoluer. Toute modification substantielle sera annoncée dans la
-    conversation Telegram, et la date en haut de page sera mise à jour.
-  </p>
-
-  <div class="callout" style="margin-top:44px;">
-    <p>
-      Une question sur vos données ? Écrivez à
-      <a href="mailto:contact@guilit.com">contact@guilit.com</a>.
-    </p>
-  </div>
+  <p>Guilit est un assistant conversationnel accessible sur <a href="https://app.guilit.com">app.guilit.com</a>. Cette page décrit les données enregistrées et les choix disponibles.</p>
+  <div class="callout"><p>Vos échanges servent à vous répondre et à garder le fil pendant 24 heures. La contribution au corpus français↔lingala est <strong>facultative et désactivée au départ</strong> pour les nouveaux comptes web.</p></div>
+  <h2>1. Responsable et contact</h2>
+  <p>Trillion MONGHIRO, éditeur de Guilit, projet personnel. Pour toute demande sur vos données : <a href="mailto:contact@guilit.com">contact@guilit.com</a>.</p>
+  <h2>2. Votre compte et votre connexion</h2>
+  <p>Nous enregistrons votre adresse e-mail, votre prénom ou pseudo, un identifiant de compte et sa date de création. Si vous choisissez un mot de passe, seule son empreinte Argon2 est enregistrée. Si vous choisissez Google, nous recevons l’identité vérifiée, l’adresse e-mail et le prénom fournis par Google. Nous ne recevons pas votre mot de passe Google. Les adresses des comptes créés par mot de passe ne sont pas encore vérifiées par e-mail.</p>
+  <p>Un cookie de session indispensable permet de rester connecté pendant 14 jours au maximum, selon la configuration. Il est protégé par HttpOnly, limité à l’hôte de l’application et transmis sous HTTPS en production. Le serveur ne conserve qu’une empreinte du jeton de session. La déconnexion révoque cette session. La connexion Google utilise aussi un cookie temporaire de dix minutes pour sécuriser le retour de Google. Aucun traceur publicitaire n’est ajouté par l’application.</p>
+  <h2>3. Vos discussions</h2>
+  <p>Nous conservons le texte des messages, les réponses, le titre et les identifiants de discussion pour afficher votre historique et fournir un contexte récent au modèle. Chaque compte accède uniquement à ses discussions. Chaque discussion a un contexte distinct ; le quota s’applique au compte.</p>
+  <p>Le contexte et l’historique expirent après 24 heures par défaut. Le nettoyage s’effectue toutes les cinq minutes lorsque le service est disponible et reprend après une interruption. Vous pouvez supprimer une discussion depuis la barre latérale, avec sa mémoire courte. Les compteurs d’usage et de tentatives de connexion sont nettoyés après deux jours ; les compteurs de connexion utilisent des empreintes avec un sel secret pour éviter d’y stocker l’IP ou l’adresse e-mail en clair. Les journaux applicatifs enregistrent des événements techniques, sans le contenu volontaire des conversations.</p>
+  <h2>4. Contribution facultative au corpus</h2>
+  <p>Dans les paramètres du compte, « Aider à améliorer Guilit » autorise la conservation des prochains échanges dans le corpus français↔lingala. Ce choix est désactivé au départ, modifiable sans consommer de question, et indépendant de l’historique de 24 heures.</p>
+  <p>Le corpus contient le texte original, le texte traduit lorsqu’il existe, la langue détectée, la réponse, les informations techniques du modèle et de traitement. Une empreinte avec un sel secret remplace l’identifiant du compte. Des motifs reconnaissables, comme certaines adresses e-mail ou certains numéros, sont filtrés automatiquement. <strong>Ce filtrage ne garantit pas une anonymisation complète.</strong> Évitez de partager des informations personnelles inutiles.</p>
+  <p>Si vous activez cette contribution, ces données sont conservées sans durée prédéfinie pour constituer et évaluer le corpus. Elles ne sont pas publiées automatiquement. Désactiver la contribution arrête les futurs enregistrements et ne supprime pas les anciens. Pour une demande de suppression, écrivez depuis l’adresse du compte à <a href="mailto:contact@guilit.com">contact@guilit.com</a> ; une vérification d’identité pourra être nécessaire.</p>
+  <h2>5. Prestataires techniques</h2>
+  <p>Le texte de votre question et le contexte récent sont transmis au fournisseur de modèle sollicité pour produire la réponse : DeepSeek dans la configuration actuelle, ou Anthropic si ce repli est configuré. La connexion Google n’intervient que si vous la choisissez ; les conversations ne sont pas envoyées à Google pour cette connexion. Le serveur est hébergé chez Hostinger et le trafic HTTPS passe par Cloudflare. Voir les <a href="mentions-legales.html">mentions légales</a>.</p>
+  <p>Ces services peuvent traiter des données hors de RDC selon leurs propres politiques. Nous ne promettons pas un traitement exclusivement local ni une absence de conservation par ces prestataires.</p>
+  <h2>6. Durée du compte et demandes</h2>
+  <p>Les données du compte restent enregistrées tant que le compte existe. La suppression automatique du compte et la récupération automatique du mot de passe par e-mail ne sont pas disponibles dans cette première version. Contactez <a href="mailto:contact@guilit.com">contact@guilit.com</a> pour demander l’accès, la correction ou la suppression de vos données. Ne transmettez jamais votre mot de passe.</p>
+  <h2>7. Sécurité et précautions</h2>
+  <p>Les échanges sont chiffrés en transit. La base n’est pas exposée directement sur Internet. Aucun système n’est infaillible : n’envoyez pas de mots de passe, de codes de transfert d’argent, de numéros de carte bancaire ni de données sensibles inutiles. Guilit peut se tromper : vérifiez les informations importantes.</p>
+  <h2>8. Jeunes utilisateurs</h2>
+  <p>Le service n’est pas destiné aux enfants de moins de 13 ans. Pour toute question concernant les données d’un jeune utilisateur, contactez l’éditeur.</p>
+  <h2>9. Modifications</h2>
+  <p>La date en haut de page indique la dernière mise à jour. Les évolutions importantes seront indiquées sur le site ou dans l’application.</p>
 </main>
 
 <footer>
@@ -239,7 +126,7 @@
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="corpus.html">Le corpus</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="https://t.me/GuilitBot?start=site">Telegram</a></li>
+          <li><a href="https://app.guilit.com">L’application</a></li>
         </ul>
       </div>
       <div class="footer-col">

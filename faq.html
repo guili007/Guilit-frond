@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#0C447C">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<!-- Aperçu au partage (WhatsApp, Telegram, Facebook, X, LinkedIn) -->
+<!-- Aperçu au partage -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Guilit">
 <meta property="og:locale" content="fr_CD">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://guilit.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Guilit, l'assistant qui parle votre langue : français et lingala sur Telegram">
+<meta property="og:image:alt" content="Guilit, l'assistant qui parle votre langue : français et lingala sur le web">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +37,7 @@
     <rect x="85" y="0" width="35" height="45" fill="black"/>
     <rect x="60" y="45" width="25" height="15" fill="white"/>
   </mask>
-  <symbol id="i-telegram" viewBox="0 0 24 24">
-    <path d="M21.94 4.04a1.2 1.2 0 0 0-1.28-.17L2.5 11.2c-.9.36-.86 1.65.06 1.95l4.5 1.47 1.7 5.16c.24.72 1.16.92 1.68.37l2.47-2.6 4.5 3.3c.63.46 1.53.13 1.7-.64l3.2-14.6a1.2 1.2 0 0 0-.37-1.57ZM9.1 14.2l8.7-6.6-6.9 7.6c-.15.17-.24.38-.26.6l-.2 2.2-1.05-3.2a.9.9 0 0 0-.29-.6Z"/>
-  </symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 3h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-6 4V5a2 2 0 0 1 2-2zm0 2v14l3.4-2H20V5H4z"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24">
     <path d="M11 3.5a1 1 0 0 1 2 0V11h7.5a1 1 0 0 1 0 2H13v7.5a1 1 0 0 1-2 0V13H3.5a1 1 0 0 1 0-2H11V3.5Z"/>
   </symbol>
@@ -69,9 +67,9 @@
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="confidentialite.html">Confidentialité</a></li>
     </ul>
-    <a class="nav-cta" href="https://t.me/GuilitBot?start=site">
-      <svg aria-hidden="true"><use href="#i-telegram"/></svg>
-      Ouvrir sur Telegram
+    <a class="nav-cta" href="https://app.guilit.com">
+      <svg aria-hidden="true"><use href="#i-chat"/></svg>
+      Ouvrir Guilit
     </a>
   </div>
 </nav>
@@ -100,7 +98,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Ouvrez Telegram, cherchez <strong>@GuilitBot</strong> ou touchez le bouton « Ouvrir sur Telegram » en haut de cette page, puis appuyez sur « Démarrer ». Guilit affiche son accueil et des exemples ; vous pouvez ensuite écrire comme à un contact. Aucune inscription séparée, aucune application à installer en plus de Telegram.</p>
+          <p>Ouvrez <a href="https://app.guilit.com">app.guilit.com</a>. Connectez-vous avec Google ou créez un compte avec une adresse e-mail et un mot de passe. L’accueil et les exemples apparaissent directement dans votre espace. Aucune application à installer.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -109,7 +107,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>La démo est gratuite, avec un quota quotidien annoncé dans le bot et un compteur après chaque réponse. Les commandes /start, /aide, /role, /vision, /exemples et /confidentialite ne consomment pas de question. Aucun tarif futur n’est encore annoncé.</p>
+          <p>La démo est gratuite avec 15 questions par jour et par compte. Le compteur est affiché dans l’application. Créer une nouvelle discussion ne remet pas ce quota à zéro. Aucun tarif futur n’est encore annoncé.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -204,11 +202,11 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
-          À quoi servent les boutons sous chaque réponse ?
+          Comment retrouver ou copier une réponse ?
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Ils enregistrent votre avis sur la réponse. Cette note rejoint le corpus si vous n'avez pas désactivé la collecte, et sert à repérer ce qui fonctionne réellement plutôt que ce qui semble fonctionner.</p>
+          <p>Vos discussions sont accessibles dans la barre latérale pendant 24 heures. Le bouton « Copier la réponse » permet de reprendre le texte. Vous pouvez aussi supprimer une discussion.</p>
         </div></div>
       </div>
     </div>
@@ -221,7 +219,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Ils servent à vous répondre et, sauf refus de votre part, à construire un corpus français↔lingala anonymisé. Le détail complet est dans la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+          <p>Vos messages servent à vous répondre et à garder le fil pendant 24 heures. La contribution au corpus est facultative, désactivée au départ et modifiable dans les paramètres. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -230,7 +228,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Envoyez <code>/confidentialite</code> dans la conversation. L'effet est immédiat, même si vous avez atteint votre limite de messages du jour.</p>
+          <p>Ouvrez les paramètres du compte et désactivez « Aider à améliorer Guilit ». Ce choix concerne les prochains échanges et ne consomme pas de question.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -252,8 +250,8 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Écrivez à <a href="mailto:contact@guilit.com">contact@guilit.com</a> en décrivant le problème rencontré. Pour une mauvaise réponse, vous pouvez aussi utiliser le bouton de notation sous le message.</p>
-          <p>Les boutons enregistrent une note ; ils n'ouvrent pas une conversation avec le responsable du projet. Pour obtenir une aide humaine, utilisez l'e-mail. Les demandes sont traitées manuellement, sans délai de réponse garanti.</p>
+          <p>Écrivez à <a href="mailto:contact@guilit.com">contact@guilit.com</a> en décrivant le problème rencontré. Vous pouvez copier la réponse concernée pour expliquer l’erreur.</p>
+          <p>Pour obtenir une aide humaine, écrivez à <a href="mailto:contact@guilit.com">contact@guilit.com</a>. Les demandes sont traitées manuellement, sans délai de réponse garanti.</p>
         </div></div>
       </div>
     </div>
@@ -266,7 +264,7 @@
           <span class="i-toggle"><svg aria-hidden="true"><use href="#i-plus"/></svg></span>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Pas encore. WhatsApp est une piste soumise au cadrage de l’usage, aux conditions de la plateforme et à la validation de l’intégration. La démo reste sur Telegram. Voir la <a href="a-propos.html">feuille de route</a>.</p>
+          <p>Pas encore. WhatsApp est une piste soumise au cadrage de l’usage, aux conditions de la plateforme et à la validation de l’intégration. La démo reste sur le web. Voir la <a href="a-propos.html">feuille de route</a>.</p>
         </div></div>
       </div>
       <div class="faq-item">
@@ -320,7 +318,7 @@
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="corpus.html">Le corpus</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="https://t.me/GuilitBot?start=site">Telegram</a></li>
+          <li><a href="https://app.guilit.com">L’application</a></li>
         </ul>
       </div>
       <div class="footer-col">

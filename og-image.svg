@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#fcf9f3"/>
+<svg x="80" y="65" width="72" height="72" viewBox="0 0 120 120">
+  <defs>
+    <mask id="g">
+      <rect width="120" height="120" fill="#000"/>
+      <circle cx="60" cy="60" r="45" fill="#fff"/>
+      <circle cx="60" cy="60" r="18" fill="#000"/>
+      <rect x="85" y="0" width="35" height="45" fill="#000"/>
+      <rect x="60" y="45" width="25" height="15" fill="#fff"/>
+    </mask>
+  </defs>
+  <g mask="url(#g)"><g transform="rotate(-45 60 60)">
+    <rect x="-50" y="-30" width="220" height="42" fill="#E24B4A"/>
+    <rect x="-50" y="16" width="220" height="42" fill="#F0A227"/>
+    <rect x="-50" y="62" width="220" height="42" fill="#0C447C"/>
+    <rect x="-50" y="108" width="220" height="42" fill="#E24B4A"/>
+  </g></g>
+</svg>
+
+<text x="170" y="119" font-family="Georgia,serif" font-size="46" font-weight="bold" fill="#0c447c">Guilit</text>
+<text x="80" y="315" font-family="Georgia,serif" font-size="64" font-weight="bold" fill="#123247">L’assistant qui parle</text>
+<text x="80" y="397" font-family="Georgia,serif" font-size="73" font-weight="bold" fill="#0c447c">votre langue.</text>
+<rect x="755" y="150" width="378" height="175" rx="24" fill="#fff"/>
+<rect x="780" y="176" width="89" height="28" rx="14" fill="#1c9673"/>
+<text x="791" y="196" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff">Lingala</text>
+<text x="780" y="235" font-family="Arial,sans-serif" font-size="23" fill="#123247"><tspan x="780">Mbote ! Tuna ngai likambo</tspan><tspan x="780" dy="31">nyonso, na lingala to na</tspan><tspan x="780" dy="31">français.</tspan></text>
+<path d="M960 630L1200 390V470L1040 630Z" fill="#e24b4a"/><path d="M1040 630L1200 470V550L1120 630Z" fill="#f0a227"/><path d="M1120 630L1200 550V630Z" fill="#0c447c"/>
+<text x="80" y="552" font-family="Arial,sans-serif" font-size="25" fill="#4d6982">Français &amp; lingala · app.guilit.com · conçu en RDC</text>
+</svg>
